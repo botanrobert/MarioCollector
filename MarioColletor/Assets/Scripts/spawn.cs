@@ -6,7 +6,8 @@ public class spawn : MonoBehaviour {
 
 
 	//public GameObject killmario;
-	public GameObject mushrooms;
+	public GameObject[] obj_spawn;
+	int numObj;
 	public float maxPos = 3.5f;
 	public float delayTimer = 4f;
 	float timer;
@@ -24,11 +25,10 @@ public class spawn : MonoBehaviour {
 	void Update () {
 		timer -= Time.deltaTime; //decrement the value of the timer
 		if (timer <= 0){
-			//Vector3 killPos = new Vector3 (Random.Range (-3.5f, 3.5f), transform.position.y, transform.position.z);
 			Vector3 mushPos = new Vector3 (Random.Range (-3.5f, 3.5f), transform.position.y, transform.position.z);
+			numObj = Random.Range (0,4);
 
-			//Instantiate (killmario, killPos, transform.rotation);
-			Instantiate (mushrooms, mushPos, transform.rotation);
+			Instantiate (obj_spawn[numObj], mushPos, transform.rotation);
 
 			timer = delayTimer; //again assign value 1 to respawn again objects
 		}
