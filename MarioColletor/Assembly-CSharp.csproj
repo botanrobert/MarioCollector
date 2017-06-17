@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\UI_Menu.cs" />
-     <Compile Include="Assets\Scripts\destroyEnemy.cs" />
      <Compile Include="Assets\Scripts\moveMario.cs" />
      <Compile Include="Assets\Scripts\spawn.cs" />
      <Compile Include="Assets\Scripts\spawnMushroom.cs" />
