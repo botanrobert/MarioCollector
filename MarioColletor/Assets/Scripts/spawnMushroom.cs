@@ -6,7 +6,7 @@ public class spawnMushroom : MonoBehaviour {
 
 
 	public GameObject mushrooms;
-	public float maxPos = 3.5f;
+	public float maxPos = 3.4f;
 	public float delayTimer = 1.5f;
 	float timer;
 
@@ -22,7 +22,7 @@ public class spawnMushroom : MonoBehaviour {
 	void Update () {
 		timer -= Time.deltaTime; //decrement the value of the timer
 		if (timer <= 0){
-			Vector3 mushPos = new Vector3 (Random.Range (-3.5f, 3.5f), transform.position.y, transform.position.z);
+			Vector3 mushPos = new Vector3 (Random.Range (-3.4f, 3.4f), transform.position.y, transform.position.z);
 
 			Instantiate (mushrooms, mushPos, transform.rotation);
 

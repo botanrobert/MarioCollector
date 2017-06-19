@@ -6,7 +6,7 @@ public class spawn : MonoBehaviour {
 
 	public GameObject[] obj_spawn; // array objects spawned
 	int numObj; //number of objects spawned
-	public float maxPos = 3.5f; // max position spawn
+	public float maxPos = 3.4f; // max position spawn
 	public float delayTimer = 3f; // objects spawn after 3 sec
 	float timer;
 
@@ -23,7 +23,7 @@ public class spawn : MonoBehaviour {
 	void Update () {
 		timer -= Time.deltaTime; //decrement the value of the timer
 		if (timer <= 0){
-			Vector3 mushPos = new Vector3 (Random.Range (-3.5f, 3.5f), transform.position.y, transform.position.z);
+			Vector3 mushPos = new Vector3 (Random.Range (-3.4f, 3.4f), transform.position.y, transform.position.z);
 			numObj = Random.Range (0,4); // number off objects
 
 			Instantiate (obj_spawn[numObj], mushPos, transform.rotation); // instantiate the num off objects, in the range
